@@ -12,16 +12,23 @@ class MainActivity : AppCompatActivity() {
     private lateinit var productAdapter: ProductAdapter
 
     var products = mutableListOf(
-        Product(0,"Product 1", "Category 1", "Description 1", R.drawable.ic_launcher_foreground),
-        Product(1,"Product 2", "Category 2", "Description 2", R.drawable.ic_launcher_foreground),
-        Product(2,"Product 3", "Category 3", "Description 3", R.drawable.image1)
+        Product(0,"Product 1", "Category 1", "Description 1", R.drawable.image1),
+        Product(1,"Product 2", "Category 2", "Description 2", R.drawable.image2),
+        Product(2,"Product 3", "Category 3", "Description 3", R.drawable.image3)
     )
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        products.add(Product(products.size,"Product 4", "Category 4", "Description 4", R.drawable.image1))
+        products.add(Product(products.size,"Product 4", "Category 4", "Description 4", R.drawable.image4))
+        products.add(Product(products.size,"Product 5", "Category 5", "Description 5", R.drawable.image5))
+        products.add(Product(products.size,"Product 6", "Category 6", "Description 6", R.drawable.image6))
+        products.add(Product(products.size,"Product 7", "Category 7", "Description 7", R.drawable.image7))
+        products.add(Product(products.size,"Product 8", "Category 8", "Description 8", R.drawable.image8))
+        products.add(Product(products.size,"Product 9", "Category 9", "Description 9", R.drawable.image9))
+        products.add(Product(products.size,"Product 10", "Category 10", "Description 10", R.drawable.image10))
+        products.add(Product(products.size,"Product 11", "Category 11", "Description 11", R.drawable.image11))
 
         productAdapter = ProductAdapter(this, products, ::onProductClick)
 
